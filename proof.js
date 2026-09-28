@@ -42,6 +42,13 @@ const proofProjects = {
         alt: "Screenshot indicating how exported video evidence looks of body camera",
         title: "Evidence Export - Body camera video",
         caption: "Screenshot showing an exported body-camera video with a company watermark and officer information embedded into the footage. This provides an additional layer of accountability and helps deter unauthorized alteration or misuse of the video evidence."
+      },
+      {
+        type: "image",
+        src: "assets/proof/officer-protected-evidence.png",
+        alt: "Screenshot of protected session evidence and officer assignment details",
+        title: "Protected Session Evidence",
+        caption: "Protected-session summary showing its timeline, officer assignment, evidence summary, and linked recordings."
       }
 
     ],
@@ -107,7 +114,8 @@ function addMediaItem(item) {
     media.preload = "metadata";
     if (item.poster) media.poster = item.poster;
   } else {
-    media.loading = "lazy";
+    media.loading = "eager";
+    media.decoding = "async";
     media.alt = item.alt || item.title || "Project screenshot";
   }
   const caption = document.createElement("figcaption");
