@@ -8,7 +8,13 @@ const proofProjects = {
     summary: "Screenshots and recordings for the evidence-management workflow. Demonstration media should use synthetic data only.",
     backId: "project-udes",
     media: [
-      "assets/proof/banch-video-requests.png"
+      {
+        type: "image",
+        src: "assets/proof/branch-video-requests.png",
+        alt: "Video request screenshot of Branch Admin",
+        title: "Branch Admin video Request",
+        caption: "Screenshot of of Branch Admin User in request section."
+      }
     ],
   },
   azure: {
