@@ -88,6 +88,12 @@ const backLink = document.querySelector("#project-back");
 const gallery = document.querySelector("#proof-gallery");
 const count = document.querySelector("#proof-count");
 const year = document.querySelector("#current-year");
+const viewer = document.querySelector("#proof-viewer");
+const viewerTitle = document.querySelector("#viewer-title");
+const viewerBody = document.querySelector("#viewer-body");
+const viewerCaption = document.querySelector("#viewer-caption");
+const viewerClose = viewer?.querySelector(".viewer-close");
+let activeViewerTrigger = null;
 
 if (year) year.textContent = String(new Date().getFullYear());
 
@@ -111,18 +117,68 @@ function addMediaItem(item) {
   if (item.type === "video") {
     media.controls = true;
     media.preload = "metadata";
+    media.controlsList = "nodownload noremoteplayback";
+    media.disablePictureInPicture = true;
+    media.disableRemotePlayback = true;
+    media.addEventListener("contextmenu", (event) => event.preventDefault());
     if (item.poster) media.poster = item.poster;
   } else {
     media.loading = "lazy";
     media.alt = item.alt || item.title || "Project screenshot";
   }
   const caption = document.createElement("figcaption");
+  const captionCopy = document.createElement("div");
+  captionCopy.className = "proof-caption-copy";
   const heading = document.createElement("strong");
   heading.textContent = item.title || (item.type === "video" ? "Project recording" : "Project screenshot");
-  caption.append(heading, document.createTextNode(item.caption || ""));
+  captionCopy.append(heading, document.createTextNode(item.caption || ""));
+  const enlargeButton = document.createElement("button");
+  enlargeButton.className = "button button-outline proof-enlarge";
+  enlargeButton.type = "button";
+  enlargeButton.textContent = "Enlarge";
+  enlargeButton.setAttribute("aria-label", `Enlarge ${item.type}: ${heading.textContent}`);
+  enlargeButton.addEventListener("click", () => openViewer(item, enlargeButton));
+  caption.append(captionCopy, enlargeButton);
   figure.append(media, caption);
   gallery.append(figure);
   return true;
+}
+
+function openViewer(item, trigger) {
+  if (!viewer || !viewerBody) return;
+  activeViewerTrigger = trigger;
+  viewerTitle.textContent = item.title || (item.type === "video" ? "Project recording" : "Project screenshot");
+  viewerCaption.textContent = item.caption || "";
+  const media = document.createElement(item.type === "video" ? "video" : "img");
+  media.src = item.src;
+  if (item.type === "video") {
+    media.controls = true;
+    media.autoplay = true;
+    media.preload = "metadata";
+    media.controlsList = "nodownload noremoteplayback";
+    media.disablePictureInPicture = true;
+    media.disableRemotePlayback = true;
+    media.addEventListener("contextmenu", (event) => event.preventDefault());
+    if (item.poster) media.poster = item.poster;
+  } else {
+    media.alt = item.alt || item.title || "Project screenshot";
+  }
+  viewerBody.replaceChildren(media);
+  viewer.showModal();
+  viewerClose?.focus();
+}
+
+if (viewer && viewerClose) {
+  viewerClose.addEventListener("click", () => viewer.close());
+  viewer.addEventListener("click", (event) => {
+    if (event.target === viewer) viewer.close();
+  });
+  viewer.addEventListener("close", () => {
+    viewerBody?.querySelector("video")?.pause();
+    viewerBody?.replaceChildren();
+    activeViewerTrigger?.focus();
+    activeViewerTrigger = null;
+  });
 }
 
 if (!project) {
