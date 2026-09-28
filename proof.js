@@ -42,8 +42,7 @@ const proofProjects = {
         alt: "Screenshot indicating how exported video evidence looks of body camera",
         title: "Evidence Export - Body camera video",
         caption: "Screenshot showing an exported body-camera video with a company watermark and officer information embedded into the footage. This provides an additional layer of accountability and helps deter unauthorized alteration or misuse of the video evidence."
-"
-      },
+      }
 
     ],
   },
