@@ -107,6 +107,8 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; le
 .project-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
 .project-action.button { min-height: 34px; padding: 0 10px; border-color: #cfd9e1; background: transparent; color: #657687; font-size: 9px; letter-spacing: .06em; cursor: not-allowed; opacity: 1; }
 .project-action.button:disabled { color: #657687; }
+.project-action.button:not(:disabled) { border-color: #b9c8d4; background: white; color: var(--navy); cursor: pointer; text-decoration: none; }
+.project-action.button:not(:disabled):hover, .project-action.button:not(:disabled):focus-visible { border-color: var(--navy); background: var(--navy); color: white; }
 
 .credential-list { border-top: 1px solid #cad6e0; }
 .credential { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 23px 0; border-bottom: 1px solid #cad6e0; }

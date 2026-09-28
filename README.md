@@ -14,13 +14,16 @@ The email address and LinkedIn/GitHub profile details are placeholders. Replace 
 
 ## Add project links and proof media
 
-Each project includes disabled Code repository, Live site, and Proof & media buttons until real destinations are available. Replace each disabled button in `index.html` with a link when you have a working URL. For example:
+Project action links are configured in `script.js` in the `projectLinks` object. Set each project's `repository` and `liveSite` values to its real HTTPS URL. The matching action becomes a link that opens in a new tab. Leave a value empty when no real destination exists; its control remains visibly unavailable.
 
-```html
-<a class="button project-action" href="https://github.com/your-name/project" target="_blank" rel="noopener noreferrer">Code repository</a>
+Proof & media always opens `proof.html` in a new tab, with a breadcrumb back to that project. Add screenshots and videos under `assets/proof/<project-id>/`, then register them in the matching project's `media` array in `proof.js`. Supported types are `image` and `video`. Example:
+
+```js
+{ type: "image", src: "assets/proof/udes/dashboard.png", alt: "UDES evidence dashboard", title: "Evidence dashboard", caption: "Synthetic demonstration data." },
+{ type: "video", src: "assets/proof/udes/workflow.mp4", title: "Evidence upload workflow", caption: "A short walkthrough using synthetic data." },
 ```
 
-Use the same pattern for the live site and for a page or video containing screenshots, recordings, or other project proof. Remove `disabled` only when the destination works. Do not publish private screenshots, credentials, customer information, or sensitive system details.
+Use accurate image alt text and captions. Do not publish private screenshots, credentials, customer information, or sensitive system details. The proof page displays an empty state until media is registered, so there are no broken image or video links.
 
 ## Add real documents
 
@@ -36,6 +39,7 @@ Only add links after the corresponding file exists. Use a verified credential UR
 
 - `index.html` — semantic page structure and portfolio content
 - `styles.css` — responsive layout, typography, color, and accessibility states
-- `script.js` — mobile navigation and current footer year
+- `script.js` — mobile navigation, footer year, and project link configuration
+- `proof.html` / `proof.css` / `proof.js` — project proof pages and media gallery
 
 The mobile navigation supports keyboard interaction, and the stylesheet respects reduced-motion preferences. Google Fonts are optional; system font fallbacks are included.
