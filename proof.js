@@ -7,7 +7,9 @@ const proofProjects = {
     title: "UDES — Digital Evidence Management System",
     summary: "Screenshots and recordings for the evidence-management workflow. Demonstration media should use synthetic data only.",
     backId: "project-udes",
-    media: [],
+    media: [
+      "assets/proof/banch-video-requests.png"
+    ],
   },
   azure: {
     title: "Azure Infrastructure Lab",
