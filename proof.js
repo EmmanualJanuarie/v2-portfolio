@@ -13,8 +13,38 @@ const proofProjects = {
         src: "assets/proof/branch-video-requests.png",
         alt: "Video request screenshot of Branch Admin",
         title: "Branch Admin video Request",
-        caption: "Screenshot of of Branch Admin User in request section."
-      }
+        caption: "Screenshot of Branch Admin User in request section."
+      },
+      {
+        type: "image",
+        src: "assets/proof/branch-admin-video-pan.png",
+        alt: "Screenshot of list of videos of officer from specific Branch",
+        title: "Branch Admin - Specific Officer Video evidence list",
+        caption: "Screenshot of the Branch Admin viewing the video list for officers within their assigned branch only."
+      },
+      {
+        type: "image",
+        src: "assets/proof/organization-owner-audit-logs.png",
+        alt: "Screenshot of organization owner viewing audit logs of all his branches",
+        title: "Audit log of all branches employees with organization",
+        caption: "Screenshot of the Organization Owner viewing the Audit logs for all employees with owners organization."
+      },
+      {
+        type: "image",
+        src: "assets/proof/super-admin-report-info.png",
+        alt: "Screenshot of super admin reports section",
+        title: "Super Admin - Report Section",
+        caption: "Screenshot of the Reports section, showing the Audit Log, Chain of Custody, and Video Evidence reports. All reports are available for secure PDF download and require authentication before downloading."
+      },
+      {
+        type: "image",
+        src: "assets/proof/video-generated-evidence.png",
+        alt: "Screenshot indicating how exported video evidence looks of body camera",
+        title: "Evidence Export - Body camera video",
+        caption: "Screenshot showing an exported body-camera video with a company watermark and officer information embedded into the footage. This provides an additional layer of accountability and helps deter unauthorized alteration or misuse of the video evidence."
+"
+      },
+
     ],
   },
   azure: {
