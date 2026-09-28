@@ -12,6 +12,16 @@ Search `index.html` for bracketed text such as `[City, Country]` and replace it 
 
 The email address and LinkedIn/GitHub profile details are placeholders. Replace them before publishing. Unavailable profile URLs are shown as text rather than fake links.
 
+## Add project links and proof media
+
+Each project includes disabled Code repository, Live site, and Proof & media buttons until real destinations are available. Replace each disabled button in `index.html` with a link when you have a working URL. For example:
+
+```html
+<a class="button project-action" href="https://github.com/your-name/project" target="_blank" rel="noopener noreferrer">Code repository</a>
+```
+
+Use the same pattern for the live site and for a page or video containing screenshots, recordings, or other project proof. Remove `disabled` only when the destination works. Do not publish private screenshots, credentials, customer information, or sensitive system details.
+
 ## Add real documents
 
 The Documents section currently contains no download links because no files were supplied. Add real files under a `documents/` directory, then replace the note in the Documents section with links, for example:

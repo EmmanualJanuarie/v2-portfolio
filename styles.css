@@ -98,12 +98,15 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; le
 .tag { padding: 2px 6px; border: 1px solid #d5dfe7; color: #788897; font-size: 8px; letter-spacing: .08em; }
 .project h3 { margin-bottom: 8px; font-size: 19px; letter-spacing: -.025em; }
 .project-description { max-width: 790px; margin-bottom: 9px; color: #596978; font-size: 13px; }
-.project-built { max-width: 880px; margin-bottom: 12px; color: #73808c; font-size: 11px; line-height: 1.7; }
-.project-built strong { margin-left: 7px; color: #405367; font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
-.project-built strong:first-child { margin-left: 0; }
+.project-outcomes { display: grid; gap: 7px; max-width: 880px; margin: 12px 0 14px; padding: 0; list-style: none; }
+.project-outcomes li { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 10px; color: #73808c; font-size: 11px; line-height: 1.65; }
+.project-outcomes strong { color: #405367; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
 .tech-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .tech-list span { padding: 3px 7px; border: 1px solid #dbe2e8; color: #52667a; font-size: 10px; }
 .project-link-placeholder { margin: 12px 0 0; color: #788796; font-size: 10px; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
+.project-action.button { min-height: 34px; padding: 0 10px; border-color: #cfd9e1; background: transparent; color: #657687; font-size: 9px; letter-spacing: .06em; cursor: not-allowed; opacity: 1; }
+.project-action.button:disabled { color: #657687; }
 
 .credential-list { border-top: 1px solid #cad6e0; }
 .credential { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 23px 0; border-bottom: 1px solid #cad6e0; }
@@ -184,7 +187,8 @@ code { padding: 2px 4px; background: #e3eaf0; color: var(--navy); font-size: .9e
   .button { flex: 1 1 auto; padding-inline: 12px; font-size: 9px; }
   .project { grid-template-columns: 30px minmax(0, 1fr); gap: 10px; }
   .project h3 { font-size: 17px; }
-  .project-built strong { display: inline-block; margin-left: 0; }
+  .project-outcomes li { grid-template-columns: 72px minmax(0, 1fr); gap: 7px; }
+  .project-actions .project-action.button { flex: 0 1 auto; }
   .credential { flex-direction: column; gap: 10px; }
   .experience-top { flex-direction: column; gap: 5px; }
   .education-entry { flex-direction: column; gap: 7px; }
