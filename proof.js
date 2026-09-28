@@ -13,7 +13,7 @@ const proofProjects = {
         src: "assets/proof/branch-video-requests.png",
         alt: "Video request screenshot of Branch Admin",
         title: "Branch Admin video Request",
-        caption: "Screenshot of Branch Admin User in request section."
+        caption: "Screenshot of the Branch Admin User in the Requests section, showing additional information associated with a selected body-camera video and its assigned officer. The section provides visibility into recorded violations, flagged irregularities, late uploads, and potentially modified video files, supporting monitoring, accountability, and evidence integrity."
       },
       {
         type: "image",
@@ -50,7 +50,6 @@ const proofProjects = {
         title: "Protected Session Evidence",
         caption: "Protected-session summary showing its timeline, officer assignment, evidence summary, and linked recordings."
       }
-
     ],
   },
   azure: {
@@ -114,8 +113,7 @@ function addMediaItem(item) {
     media.preload = "metadata";
     if (item.poster) media.poster = item.poster;
   } else {
-    media.loading = "eager";
-    media.decoding = "async";
+    media.loading = "lazy";
     media.alt = item.alt || item.title || "Project screenshot";
   }
   const caption = document.createElement("figcaption");
