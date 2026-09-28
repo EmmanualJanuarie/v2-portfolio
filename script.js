@@ -47,41 +47,25 @@ function safeWebUrl(value) {
   }
 }
 
-function makeProjectAction(label, href, options = {}) {
-  if (!href) {
-    const button = document.createElement("button");
-    button.className = "button project-action project-action-unavailable";
-    button.type = "button";
-    button.disabled = true;
-    button.textContent = label;
-    button.title = options.title || "Add this project URL in script.js";
-    button.setAttribute("aria-label", `${label} unavailable until a project URL is added`);
-    return button;
-  }
+function activateProjectLink(button, href) {
+  if (!button || !href) return;
 
   const link = document.createElement("a");
   link.className = "button project-action";
   link.href = href;
-  link.textContent = label;
-  if (options.newTab) {
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-  }
-  return link;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = button.textContent;
+  button.replaceWith(link);
 }
 
 document.querySelectorAll("[data-project-actions]").forEach((container) => {
   const projectId = container.dataset.projectActions;
   const links = projectLinks[projectId] || {};
-  const repositoryUrl = safeWebUrl(links.repository);
-  const liveSiteUrl = safeWebUrl(links.liveSite);
-
-  container.replaceChildren(
-    makeProjectAction("Code repository", repositoryUrl, { newTab: true }),
-    makeProjectAction("Live site", liveSiteUrl, { newTab: true }),
-    makeProjectAction("Proof & media", `proof.html?project=${encodeURIComponent(projectId)}`, {
-      newTab: true,
-      title: "Open project proof and media in a new tab",
-    }),
-  );
+  const repositoryButton = container.querySelector('[data-project-link="repository"]');
+  const liveSiteButton = container.querySelector('[data-project-link="liveSite"]');
+  if (repositoryButton && !links.repository) repositoryButton.title = "Add the project repository URL in script.js";
+  if (liveSiteButton && !links.liveSite) liveSiteButton.title = "Add the live project URL in script.js";
+  activateProjectLink(repositoryButton, safeWebUrl(links.repository));
+  activateProjectLink(liveSiteButton, safeWebUrl(links.liveSite));
 });
