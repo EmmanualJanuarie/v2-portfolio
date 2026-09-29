@@ -8,7 +8,7 @@ Open `index.html` in a browser. For a local HTTP server, run `python -m http.ser
 
 ## Personalize the content
 
-Search `index.html` for bracketed text such as `[City, Country]` and replace it with accurate details. Update the page title and meta description, name in the header/footer, contact information, certifications, education, and experience. Keep project outcomes factual and remove any lab placeholders that are not relevant.
+Search `index.html` for bracketed text such as `[City, Country]` and replace it with accurate details. Update the page title and meta description, name in the header/footer, contact information, certifications, education, and experience. Replace each project `[MMM YYYY – MMM YYYY]` timeframe with its actual start and end month, or use `[MMM YYYY – Present]` for ongoing work. Keep project outcomes factual and remove any lab placeholders that are not relevant.
 
 The email address and LinkedIn/GitHub profile details are placeholders. Replace them before publishing. Unavailable profile URLs are shown as text rather than fake links.
 
