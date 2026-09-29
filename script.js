@@ -33,8 +33,8 @@ if (year) year.textContent = String(new Date().getFullYear());
 const projectLinks = {
   udes: { repository: "https://github.com/EmmanualJanuarie/umbrella", liveSite: "https://emmanualjanuarie.github.io/umbrella/#/login" },
   azure: { repository: "", liveSite: "" },
-  "internship-kbs": { repository: "https://github.com/EmmanualJanuarie/KBS_portal", liveSite: "https://emmanualjanuarie.github.io/KBS_portal/" },
   networking: { repository: "", liveSite: "" },
+  "internship-kbs": { repository: "https://github.com/EmmanualJanuarie/KBS_portal", liveSite: "https://emmanualjanuarie.github.io/KBS_portal" },
   "windows-server": { repository: "", liveSite: "" },
   "cloud-security": { repository: "", liveSite: "" },
 };
