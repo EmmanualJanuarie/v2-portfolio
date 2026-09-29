@@ -1,6 +1,6 @@
-# IT Professional Portfolio
+# Junior C# / .NET Developer Portfolio
 
-A responsive, single-page IT portfolio built with plain HTML, CSS, and JavaScript. There are no build tools, package installs, or third-party JavaScript dependencies.
+A responsive, single-page junior C# / .NET developer portfolio built with plain HTML, CSS, and JavaScript. There are no build tools, package installs, or third-party JavaScript dependencies.
 
 ## View locally
 
@@ -8,7 +8,7 @@ Open `index.html` in a browser. For a local HTTP server, run `python -m http.ser
 
 ## Personalize the content
 
-Search `index.html` for bracketed text such as `[City, Country]` and replace it with accurate details. Update the page title and meta description, name in the header/footer, contact information, certifications, education, and experience. Replace each project `[MMM YYYY – MMM YYYY]` timeframe with its actual start and end month, or use `[MMM YYYY – Present]` for ongoing work. Keep project outcomes factual and remove any lab placeholders that are not relevant.
+Search `index.html` for bracketed text such as `[City, Country]` and replace it with accurate details. Update the page title and meta description, contact information, certifications, education, and experience. Replace each project `[MMM YYYY – MMM YYYY]` timeframe with its actual start and end month, or use `[MMM YYYY – Present]` for ongoing work. The .NET starter projects are examples to build out: keep the placeholder label until the project exists, then replace the planned brief with accurate implementation details and outcomes.
 
 The email address and LinkedIn/GitHub profile details are placeholders. Replace them before publishing. Unavailable profile URLs are shown as text rather than fake links.
 
@@ -16,7 +16,7 @@ The email address and LinkedIn/GitHub profile details are placeholders. Replace 
 
 Project action links are configured in `script.js` in the `projectLinks` object. Set each project's `repository` and `liveSite` values to its real HTTPS URL. The matching action becomes a link that opens in a new tab. Leave a value empty when no real destination exists; its control remains visibly unavailable.
 
-Proof & media always opens `proof.html` in a new tab, with a breadcrumb back to that project. Add screenshots and videos under `assets/proof/<project-id>/`, then register them in the matching project's `media` array in `proof.js`. Supported types are `image` and `video`. Example:
+Proof & media always opens `proof.html` in a new tab, with a breadcrumb back to that project. Add screenshots and videos under `assets/proof/` (project subfolders are optional), then register them in the matching project's `media` array in `proof.js`. Supported types are `image` and `video`. Example:
 
 ```js
 { type: "image", src: "assets/proof/udes/dashboard.png", alt: "UDES evidence dashboard", title: "Evidence dashboard", caption: "Synthetic demonstration data." },

@@ -52,28 +52,28 @@ const proofProjects = {
       }
     ],
   },
-  azure: {
-    title: "Azure Infrastructure Lab",
-    summary: "Screenshots and recordings documenting the Azure infrastructure lab.",
-    backId: "project-azure",
+  "internship-kbs": {
+    title: "KBS — Business Learning & Administration Portal",
+    summary: "Screenshots and recordings from the learning and administration portal prototype.",
+    backId: "project-internship-kbs",
     media: [],
   },
-  networking: {
-    title: "Network Troubleshooting Lab",
-    summary: "Screenshots, diagrams, and recordings documenting network topology and troubleshooting work.",
-    backId: "project-networking",
+  "dotnet-api": {
+    title: "ASP.NET Core Task Management API",
+    summary: "Screenshots and recordings documenting the task management API starter project.",
+    backId: "project-dotnet-api",
     media: [],
   },
-  "windows-server": {
-    title: "Windows Server Administration Lab",
-    summary: "Screenshots and recordings documenting server administration tasks and outcomes.",
-    backId: "project-windows-server",
+  "dotnet-inventory": {
+    title: "Inventory Management App",
+    summary: "Screenshots and recordings documenting the inventory management application starter project.",
+    backId: "project-dotnet-inventory",
     media: [],
   },
-  "cloud-security": {
-    title: "Cloud Security Lab",
-    summary: "Screenshots and recordings documenting cloud identity, access, network controls, and monitoring.",
-    backId: "project-cloud-security",
+  "dotnet-desktop": {
+    title: "Desktop Library Tracker",
+    summary: "Screenshots and recordings documenting the .NET desktop library tracker starter project.",
+    backId: "project-dotnet-desktop",
     media: [],
   },
 };
