@@ -47,6 +47,24 @@ function safeWebUrl(value) {
   }
 }
 
+// Add the public credential verification URL here when it is available.
+const credentialLinks = {
+  "devops-engineer-expert": "",
+};
+
+document.querySelectorAll("[data-credential-link]").forEach((slot) => {
+  const url = safeWebUrl(credentialLinks[slot.dataset.credentialLink]);
+  if (!url) return;
+
+  const link = document.createElement("a");
+  link.className = "credential-link";
+  link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = "View credential";
+  slot.replaceWith(link);
+});
+
 function activateProjectLink(button, href) {
   if (!button || !href) return;
 

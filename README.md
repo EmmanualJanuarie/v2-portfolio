@@ -12,6 +12,8 @@ Search `index.html` for bracketed text such as `[City, Country]` and replace it 
 
 The email address and LinkedIn/GitHub profile details are placeholders. Replace them before publishing. Unavailable profile URLs are shown as text rather than fake links.
 
+Add a credential verification URL to the matching entry in `credentialLinks` in `script.js`. The **View credential** text link appears after the provider and completion date when a valid URL is configured.
+
 ## Add project links and proof media
 
 Project action links are configured in `script.js` in the `projectLinks` object. Set each project's `repository` and `liveSite` values to its real HTTPS URL. The matching action becomes a link that opens in a new tab. Leave a value empty when no real destination exists; its control remains visibly unavailable.
