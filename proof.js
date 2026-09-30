@@ -10,42 +10,42 @@ const proofProjects = {
     media: [
       {
         type: "image",
-        src: "assets/proof/branch-video-requests.png",
+        src: "assets/proof/udes/branch-video-requests.png",
         alt: "Video request screenshot of Branch Admin",
         title: "Branch Admin video Request",
         caption: "Screenshot of the Branch Admin User in the Requests section, showing additional information associated with a selected body-camera video and its assigned officer. The section provides visibility into recorded violations, flagged irregularities, late uploads, and potentially modified video files, supporting monitoring, accountability, and evidence integrity."
       },
       {
         type: "image",
-        src: "assets/proof/branch-admin-video-pan.png",
+        src: "assets/proof/udes/branch-admin-video-pan.png",
         alt: "Screenshot of list of videos of officer from specific Branch",
         title: "Branch Admin - Specific Officer Video evidence list",
         caption: "Screenshot of the Branch Admin viewing the video list for officers within their assigned branch only."
       },
       {
         type: "image",
-        src: "assets/proof/organization-owner-audit-logs.png",
+        src: "assets/proof/udes/organization-owner-audit-logs.png",
         alt: "Screenshot of organization owner viewing audit logs of all his branches",
         title: "Audit log of all branches employees with organization",
         caption: "Screenshot of the Organization Owner viewing the Audit logs for all employees with owners organization."
       },
       {
         type: "image",
-        src: "assets/proof/super-admin-report-info.png",
+        src: "assets/proof/udes/super-admin-report-info.png",
         alt: "Screenshot of super admin reports section",
         title: "Super Admin - Report Section",
         caption: "Screenshot of the Reports section, showing the Audit Log, Chain of Custody, and Video Evidence reports. All reports are available for secure PDF download and require authentication before downloading."
       },
       {
         type: "image",
-        src: "assets/proof/video-generated-evidence.png",
+        src: "assets/proof/udes/video-generated-evidence.png",
         alt: "Screenshot indicating how exported video evidence looks of body camera",
         title: "Evidence Export - Body camera video",
         caption: "Screenshot showing an exported body-camera video with a company watermark and officer information embedded into the footage. This provides an additional layer of accountability and helps deter unauthorized alteration or misuse of the video evidence."
       },
       {
         type: "image",
-        src: "assets/proof/officer-protected-evidence.png",
+        src: "assets/proof/udes/officer-protected-evidence.png",
         alt: "Screenshot of protected session evidence and officer assignment details",
         title: "Protected Session Evidence",
         caption: "Protected-session summary showing its timeline, officer assignment, evidence summary, and linked recordings."
