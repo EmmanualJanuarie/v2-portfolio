@@ -61,19 +61,19 @@ const proofProjects = {
   "dotnet-api": {
     title: "ASP.NET Core Task Management API",
     summary: "Screenshots and recordings documenting the task management API starter project.",
-    backId: "project-dotnet-api",
+    backId: "project-signalwatch",
     media: [],
   },
   "dotnet-inventory": {
     title: "Inventory Management App",
     summary: "Screenshots and recordings documenting the inventory management application starter project.",
-    backId: "project-dotnet-inventory",
+    backId: "project-faulttrace",
     media: [],
   },
   "dotnet-desktop": {
     title: "Desktop Library Tracker",
     summary: "Screenshots and recordings documenting the .NET desktop library tracker starter project.",
-    backId: "project-dotnet-desktop",
+    backId: "project-relaygrid",
     media: [],
   },
 };
