@@ -29,7 +29,7 @@ Use accurate image alt text and captions. Do not publish private screenshots, cr
 
 ## Add real documents
 
-The Documents section includes a disabled resume button because no resume file was supplied. Add your PDF as `documents/emmanual-januarie-resume.pdf`, then replace the button in `index.html` with a download link:
+The Documents section links to the supplied resume at `documents/emmanual-januarie-resume.pdf`:
 
 ```html
 <a class="button button-primary" href="documents/emmanual-januarie-resume.pdf" download>Download resume</a>

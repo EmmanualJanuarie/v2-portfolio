@@ -136,9 +136,15 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; le
 .additional-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px; }
 .additional-grid p { margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); color: #667686; font-size: 12px; }
 .additional-grid strong { color: var(--navy); font-size: 11px; }
-.document-actions { margin: 16px 0 10px; }
-.document-actions .button:disabled { border-color: #9aa8b5; background: #8293a2; color: white; cursor: not-allowed; opacity: 1; }
-.document-note { margin: 0; color: #6d7c8a; font-size: 11px; }
+.documents-content { max-width: none; }
+.documents-intro { margin-bottom: 16px; color: #627282; font-size: 13px; }
+.download-document { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 22px; border: 1px solid #cbd6df; background: #fff; }
+.document-type { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 7px; color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.document-type span { color: #83909b; font-weight: 600; }
+.document-info h3 { margin-bottom: 4px; font-size: 17px; }
+.document-detail { margin: 0; color: #6e7c89; font-size: 11px; }
+.document-download { min-height: 42px; flex: 0 0 auto; gap: 16px; }
+.document-download span { font-size: 15px; }
 code { padding: 2px 4px; background: #e3eaf0; color: var(--navy); font-size: .9em; }
 
 .contact-section { padding: 82px 0; }
@@ -201,6 +207,8 @@ code { padding: 2px 4px; background: #e3eaf0; color: var(--navy); font-size: .9e
   .credential { flex-direction: column; gap: 10px; }
   .experience-top { flex-direction: column; gap: 5px; }
   .education-entry { flex-direction: column; gap: 7px; }
+  .download-document { align-items: flex-start; flex-direction: column; padding: 17px; }
+  .document-download { width: 100%; }
   .additional-grid, .contact-details { grid-template-columns: 1fr; }
   .footer-inner { flex-wrap: wrap; }
   .footer-inner > p { order: 3; flex-basis: 100%; }
