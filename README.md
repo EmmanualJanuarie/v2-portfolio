@@ -29,10 +29,10 @@ Use accurate image alt text and captions. Do not publish private screenshots, cr
 
 ## Add real documents
 
-The Documents section currently contains no download links because no files were supplied. Add real files under a `documents/` directory, then replace the note in the Documents section with links, for example:
+The Documents section includes a disabled resume button because no resume file was supplied. Add your PDF as `documents/emmanual-januarie-resume.pdf`, then replace the button in `index.html` with a download link:
 
 ```html
-<a class="button button-primary" href="documents/your-name-cv.pdf" download>Download CV</a>
+<a class="button button-primary" href="documents/emmanual-januarie-resume.pdf" download>Download resume</a>
 ```
 
 Only add links after the corresponding file exists. Use a verified credential URL for certification links and working repository/demo URLs for project links.
