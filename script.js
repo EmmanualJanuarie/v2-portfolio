@@ -49,7 +49,7 @@ function safeWebUrl(value) {
 
 // Add the public credential verification URL here when it is available.
 const credentialLinks = {
-  "devops-engineer-expert": "",
+  "devops-engineer-expert": "https://learn.microsoft.com/api/credentials/share/en-us/EmmanualJanuarie-0471/35E1E9417CEDE322?sharingId=3C00639A1DE75581",
 };
 
 document.querySelectorAll("[data-credential-link]").forEach((slot) => {
