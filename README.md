@@ -1,38 +1,31 @@
-# Emmanual Januarie — Cybersecurity Portfolio
+# SOC Analyst Portfolio
 
-A responsive, one-page portfolio presenting an early-career move toward cybersecurity operations. It distinguishes authorised practice and ongoing study from professional experience. The site uses plain HTML, CSS, and JavaScript; it has no build step or third-party JavaScript dependencies.
+A responsive static portfolio for Emmanual Januarie, an aspiring entry-level SOC Analyst in South Africa. It uses HTML, CSS, and JavaScript with no build step, third-party runtime, API key, or paid service.
 
-## View locally
+## Preview
 
-Open `index.html` in a browser. To use a local HTTP server, run `python -m http.server 8000` from this folder and visit `http://localhost:8000`.
+Open `index.html` in a browser. To serve it locally, run `python -m http.server 8000` from this directory and visit `http://localhost:8000`.
 
-## Add security practice reports
+## Update portfolio content
 
-The Labs section has one report template. Complete an authorised exercise, review what can safely be shared, then replace the template with that report. Do not present simulated activity as production SOC work. A report should include:
+- Edit profile, skills, education, experience, and contact details in `index.html`.
+- Edit investigation, detection-rule, and lab-note templates in the data arrays in `script.js`.
+- Investigation, detection, and note cards are generated from shared accessible disclosure components.
+- Replace bracketed text only with your own verified exercise information. Leave a template clearly marked incomplete until you have completed and reviewed it.
+- Detection query text is a placeholder, not validated logic. Document test method and actual results only after testing with authorised data.
 
-1. Scenario, scope, and authorised lab/data source
-2. Investigation steps and relevant observations
-3. Evidence with timestamps or a short timeline where available
-4. Conclusion, separating observed facts from possible explanations
-5. Recommended next steps or escalation, including uncertainty
-6. Lessons learned and what you would improve
+## Add lab evidence
 
-Keep credentials, personal data, and sensitive system details out of public reports. Update `index.html` to add each completed report; use concise facts and link to a separate report page or repository where useful.
+Place authorised, sanitised screenshots or videos under `assets/proof/<lab-id>/`, then register each item in the matching record in `proof.js`. The media page opens in a new tab and links back to the related investigation. Do not publish credentials, private data, or sensitive system information.
 
-## Maintain the portfolio
+## Existing profile details
 
-- Edit content and section structure in `index.html`.
-- Edit layout, responsive rules, and accessible focus states in `styles.css`.
-- Edit navigation, lab report links, and credential links in `script.js`.
-- Add lab screenshots or videos under `assets/proof/<lab-id>/` and register them in `proof.js`.
-- The current downloadable resume reflects the software development background. Replace it with an accurate security-operations-focused resume before using it for SOC applications.
-
-Lab repository/report URLs and Microsoft credential verification URLs are configured in `script.js`. Only publish links that resolve to the intended public destination. Proof media should use synthetic or otherwise authorised data.
+The site uses information already present in the portfolio: IT: Systems Development at CTU Training Solutions (Feb 2023–Nov 2024), Junior Software Developer Intern at Kore Business Solutions (Aug–Nov 2025), and the two Microsoft cloud/developer credentials. The internship is labelled as software development experience, not SOC work. No lab findings or tested detection results are included.
 
 ## Files
 
-- `index.html` — one-page portfolio content
-- `styles.css` — design system and responsive layout
-- `script.js` — navigation, lab report links, and credential links
+- `index.html` — portfolio structure and verified profile details
+- `styles.css` — navy/teal design, responsive layout, and interaction states
+- `script.js` — reusable investigation, detection-rule, and lab-note templates
 - `proof.html`, `proof.css`, `proof.js` — lab evidence gallery and accessible media viewer
-- `documents/` — downloadable documents
+- `documents/` — existing resume download

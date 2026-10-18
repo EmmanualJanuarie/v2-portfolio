@@ -2,18 +2,30 @@
 
 // Add authorised lab screenshots/videos to assets/proof/<lab-id>/ and register each file below.
 // Supported media types are "image" and "video". Use accurate alt text and captions.
-const proofProjects = {
-  "soc-lab-template": {
-    title: "Laboratory experience report",
-    summary: "Authorised lab evidence will appear here after a report is completed and reviewed.",
-    backId: "project-soc-lab-template",
+const proofLabs = {
+  "brute-force-login": {
+    title: "Brute-Force Login Investigation",
+    summary: "Authorised supporting evidence can be registered here after the lab is completed and reviewed.",
+    backId: "report-brute-force-login",
+    media: [],
+  },
+  "phishing-email": {
+    title: "Phishing Email Investigation",
+    summary: "Authorised supporting evidence can be registered here after the lab is completed and reviewed.",
+    backId: "report-phishing-email",
+    media: [],
+  },
+  "endpoint-network": {
+    title: "Windows Endpoint or Network Investigation",
+    summary: "Authorised supporting evidence can be registered here after the lab is completed and reviewed.",
+    backId: "report-endpoint-network",
     media: [],
   },
 };
 
 const params = new URLSearchParams(window.location.search);
-const projectId = params.get("project");
-const project = Object.hasOwn(proofProjects, projectId) ? proofProjects[projectId] : null;
+const labId = params.get("lab");
+const lab = Object.hasOwn(proofLabs, labId) ? proofLabs[labId] : null;
 const title = document.querySelector("#proof-title");
 const summary = document.querySelector("#proof-summary");
 const breadcrumb = document.querySelector("#breadcrumb-project");
@@ -66,7 +78,7 @@ function addMediaItem(item) {
   heading.textContent = item.title || (item.type === "video" ? "Lab recording" : "Lab screenshot");
   captionCopy.append(heading, document.createTextNode(item.caption || ""));
   const enlargeButton = document.createElement("button");
-  enlargeButton.className = "button button-outline proof-enlarge";
+  enlargeButton.className = "button button-secondary proof-enlarge";
   enlargeButton.type = "button";
   enlargeButton.textContent = "Enlarge";
   enlargeButton.setAttribute("aria-label", `Enlarge ${item.type}: ${heading.textContent}`);
@@ -114,20 +126,20 @@ if (viewer && viewerClose) {
   });
 }
 
-if (!project) {
-  document.title = "Lab proof not found | Emmanual Januarie";
+if (!lab) {
+  document.title = "Lab evidence not found | Emmanual Januarie";
   title.textContent = "Lab proof not found";
   summary.textContent = "Choose a lab from the portfolio to view its supporting evidence.";
   breadcrumb.textContent = "Not found";
   count.textContent = "";
-  setEmptyState("This lab link is not recognized. Return to the Labs section and choose a lab.");
+  setEmptyState("This lab link is not recognized. Return to Investigations and choose a report template.");
 } else {
-  document.title = `${project.title} | Lab proof`;
-  title.textContent = project.title;
-  summary.textContent = project.summary;
-  breadcrumb.textContent = project.title;
-  backLink.href = `index.html#${project.backId}`;
-  const validMedia = project.media.filter(addMediaItem);
+  document.title = `${lab.title} | Lab evidence`;
+  title.textContent = lab.title;
+  summary.textContent = lab.summary;
+  breadcrumb.textContent = lab.title;
+  backLink.href = `index.html#${lab.backId}`;
+  const validMedia = lab.media.filter(addMediaItem);
   count.textContent = `${validMedia.length} ${validMedia.length === 1 ? "item" : "items"}`;
   if (validMedia.length === 0) {
     setEmptyState("No proof files have been added yet. Add authorised lab images or videos under assets/proof/ and register them in proof.js. Keep private data, credentials, and sensitive system details out of published media.");
