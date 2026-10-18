@@ -25,7 +25,7 @@ The site uses information already present in the portfolio: IT: Systems Developm
 ## Files
 
 - `index.html` — portfolio structure and verified profile details
-- `styles.css` — navy/teal design, responsive layout, and interaction states
+- `styles.css` — restrained navy, white, and steel-blue visual style with responsive layout
 - `script.js` — reusable investigation, detection-rule, and lab-note templates
 - `proof.html`, `proof.css`, `proof.js` — lab evidence gallery and accessible media viewer
 - `documents/` — existing resume download
