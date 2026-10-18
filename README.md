@@ -1,47 +1,39 @@
-# Junior C# / .NET Developer Portfolio
+# Emmanual Januarie — Cybersecurity Portfolio
 
-A responsive, single-page junior C# / .NET developer portfolio built with plain HTML, CSS, and JavaScript. There are no build tools, package installs, or third-party JavaScript dependencies.
+A responsive, one-page portfolio presenting an early-career move toward cybersecurity operations. It distinguishes authorised practice and ongoing study from professional experience. The site uses plain HTML, CSS, and JavaScript; it has no build step or third-party JavaScript dependencies.
 
 ## View locally
 
-Open `index.html` in a browser. For a local HTTP server, run `python -m http.server 8000` from this folder, then visit `http://localhost:8000`.
+Open `index.html` in a browser. To use a local HTTP server, run `python -m http.server 8000` from this folder and visit `http://localhost:8000`.
 
-## Personalize the content
+## Add security practice reports
 
-Search `index.html` for bracketed text such as `[City, Country]` and replace it with accurate details. Update the page title and meta description, contact information, certifications, education, and experience. Replace each project `[MMM YYYY – MMM YYYY]` timeframe with its actual start and end month, or use `[MMM YYYY – Present]` for ongoing work. The .NET starter projects are examples to build out: keep the placeholder label until the project exists, then replace the planned brief with accurate implementation details and outcomes.
+The portfolio currently has an honest placeholder for lab write-ups. Add a report only after completing the exercise and reviewing what can safely be shared. Do not present simulated activity as production SOC work. A report should include:
 
-The email address and LinkedIn/GitHub profile details are placeholders. Replace them before publishing. Unavailable profile URLs are shown as text rather than fake links.
+1. Scenario, scope, and authorised lab/data source
+2. Investigation steps and relevant observations
+3. Evidence with timestamps or a short timeline where available
+4. Conclusion, separating observed facts from possible explanations
+5. Recommended next steps or escalation, including uncertainty
+6. Lessons learned and what you would improve
 
-Add a credential verification URL to the matching entry in `credentialLinks` in `script.js`. The **View credential** text link appears after the provider and completion date when a valid URL is configured.
+Keep credentials, personal data, and sensitive system details out of public reports. Update `index.html` to add each completed report; use concise facts and link to a separate report page or repository where useful.
 
-## Add project links and proof media
+## Maintain the portfolio
 
-Project action links are configured in `script.js` in the `projectLinks` object. Set each project's `repository` and `liveSite` values to its real HTTPS URL. The matching action becomes a link that opens in a new tab. Leave a value empty when no real destination exists; its control remains visibly unavailable.
+- Edit content and section structure in `index.html`.
+- Edit layout, responsive rules, and accessible focus states in `styles.css`.
+- Edit navigation, project links, and credential links in `script.js`.
+- Add project screenshots or videos under `assets/proof/<project-id>/` and register them in `proof.js`.
+- Keep the software development internship and independent software project clearly labelled as transferable background, not cybersecurity employment.
+- The current downloadable resume reflects the software development background. Replace it with an accurate security-operations-focused resume before using it for SOC applications.
 
-Proof & media always opens `proof.html` in a new tab, with a breadcrumb back to that project. Add screenshots and videos under `assets/proof/` (project subfolders are optional), then register them in the matching project's `media` array in `proof.js`. Supported types are `image` and `video`. Example:
-
-```js
-{ type: "image", src: "assets/proof/udes/dashboard.png", alt: "UDES evidence dashboard", title: "Evidence dashboard", caption: "Synthetic demonstration data." },
-{ type: "video", src: "assets/proof/udes/workflow.mp4", title: "Evidence upload workflow", caption: "A short walkthrough using synthetic data." },
-```
-
-Use accurate image alt text and captions. Do not publish private screenshots, credentials, customer information, or sensitive system details. The proof page displays an empty state until media is registered, so there are no broken image or video links.
-
-## Add real documents
-
-The Documents section links to the supplied resume at `documents/emmanual-januarie-resume.pdf`:
-
-```html
-<a class="button button-primary" href="documents/emmanual-januarie-resume.pdf" download>Download resume</a>
-```
-
-Only add links after the corresponding file exists. Use a verified credential URL for certification links and working repository/demo URLs for project links.
+Project repository/demo URLs and Microsoft credential verification URLs are configured in `script.js`. Only publish links that resolve to the intended public destination. Proof media should use synthetic or otherwise authorised data.
 
 ## Files
 
-- `index.html` — semantic page structure and portfolio content
-- `styles.css` — responsive layout, typography, color, and accessibility states
-- `script.js` — mobile navigation, footer year, and project link configuration
-- `proof.html` / `proof.css` / `proof.js` — project proof pages and media gallery
-
-The mobile navigation supports keyboard interaction, and the stylesheet respects reduced-motion preferences. Google Fonts are optional; system font fallbacks are included.
+- `index.html` — one-page portfolio content
+- `styles.css` — design system and responsive layout
+- `script.js` — navigation, project links, and credential links
+- `proof.html`, `proof.css`, `proof.js` — project proof gallery and accessible media viewer
+- `documents/` — downloadable documents

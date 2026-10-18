@@ -32,9 +32,6 @@ if (year) year.textContent = String(new Date().getFullYear());
 // Add project-specific repository and live demo URLs here when they are ready.
 const projectLinks = {
   udes: { repository: "https://github.com/EmmanualJanuarie/umbrella", liveSite: "https://emmanualjanuarie.github.io/umbrella/#/login" },
-  "dotnet-api": { repository: "", liveSite: "" },
-  "dotnet-inventory": { repository: "", liveSite: "" },
-  "dotnet-desktop": { repository: "", liveSite: "" },
   "internship-kbs": { repository: "https://github.com/EmmanualJanuarie/KBS_portal", liveSite: "https://emmanualjanuarie.github.io/KBS_portal" },
 };
 
