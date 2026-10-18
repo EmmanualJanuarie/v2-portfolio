@@ -75,10 +75,6 @@ h2 { margin-bottom: 0; font-size: clamp(29px, 3.7vw, 42px); font-weight: 700; le
 .section-content { max-width: 800px; }
 .section-content > p { color: #586978; font-size: 14px; }
 .lead { color: var(--navy) !important; font-family: var(--heading-font); font-size: clamp(17px, 1.9vw, 20px) !important; font-weight: 550; line-height: 1.55; }
-.profile-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 23px 0 0; border-top: 1px solid var(--line); }
-.profile-details div { padding: 12px 16px 12px 0; border-bottom: 1px solid var(--line); }
-.profile-details dt { margin-bottom: 3px; color: #7a8997; font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.profile-details dd { margin: 0; color: var(--navy); font-size: 12px; font-weight: 600; }
 
 .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 34px; border-top: 1px solid rgba(220,228,235,.24); border-left: 1px solid rgba(220,228,235,.24); }
 .skill-group { min-height: 137px; padding: 17px 18px; border-right: 1px solid rgba(220,228,235,.24); border-bottom: 1px solid rgba(220,228,235,.24); }
@@ -115,8 +111,12 @@ h2 { margin-bottom: 0; font-size: clamp(29px, 3.7vw, 42px); font-weight: 700; le
 .education-entry h3 { margin: 0 0 3px; font-size: 16px; }
 .education-entry p { margin: 0; color: #657587; font-size: 11px; }
 .education-date { flex: 0 0 auto; }
+.education-focus { margin-top: 7px !important; }
+.education-focus strong { color: #405367; font-weight: 700; }
 
-.resume-document { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 19px 21px; border: 1px solid #cbd6df; background: #fff; }
+.resume-document { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 18px; padding: 21px 22px; border: 1px solid #cbd6df; border-left: 3px solid var(--navy); background: #fff; }
+.resume-file-mark { width: 52px; height: 58px; display: grid; place-items: end center; padding-bottom: 7px; border: 1px solid #9cacba; background: var(--blue-wash); color: var(--navy); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.resume-document-copy { min-width: 0; }
 .document-label { margin-bottom: 5px; color: var(--accent); font-size: 8px; font-weight: 750; letter-spacing: .13em; }
 .resume-document h3 { margin-bottom: 3px; font-size: 16px; }
 .document-note { margin: 0; color: #6e7c89; font-size: 10px; }
@@ -172,7 +172,7 @@ h2 { margin-bottom: 0; font-size: clamp(29px, 3.7vw, 42px); font-weight: 700; le
   .brand-detail { font-size: 8px; letter-spacing: .07em; }
   h1 { font-size: clamp(35px, 10vw, 49px); }
   .hero-actions .button { flex: 1 1 100%; }
-  .skills-grid, .profile-details, .contact-details { grid-template-columns: 1fr; }
+  .skills-grid, .contact-details { grid-template-columns: 1fr; }
   .skill-group { min-height: 0; }
   .lab-entry { grid-template-columns: 30px minmax(0, 1fr); gap: 10px; padding: 21px 0; }
   .lab-title { font-size: 17px; }
@@ -180,8 +180,10 @@ h2 { margin-bottom: 0; font-size: clamp(29px, 3.7vw, 42px); font-weight: 700; le
   .lab-actions .button { width: 100%; }
   .credential { align-items: flex-start; flex-direction: column; gap: 7px; }
   .credential-link { margin: 0; }
-  .education-entry, .resume-document { align-items: flex-start; flex-direction: column; gap: 12px; }
-  .resume-document .button { width: 100%; }
+  .education-entry { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .resume-document { grid-template-columns: 46px minmax(0, 1fr); gap: 12px; padding: 17px; }
+  .resume-file-mark { width: 44px; height: 50px; }
+  .resume-document .button { grid-column: 1 / -1; width: 100%; }
   .contact-availability { grid-column: auto; }
   .footer-inner { align-items: flex-start; flex-wrap: wrap; }
   .footer-inner > p { order: 3; flex-basis: 100%; }
