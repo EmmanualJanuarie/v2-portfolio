@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10283F">
-  <meta name="description" content="Emmanual Januarie's entry-level SOC Analyst portfolio: authorised lab templates, security fundamentals, investigation notes, and detection rule templates.">
-  <title>Emmanual Januarie | SOC Analyst Portfolio</title>
+  <meta name="theme-color" content="#11283f">
+  <meta name="description" content="Emmanual Januarie — entry-level SOC Analyst candidate based in Eastern Cape, South Africa.">
+  <title>Emmanual Januarie | SOC Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="lab-data.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="Emmanual Januarie, home">
         <span class="brand-name">Emmanual Januarie</span>
-        <span class="brand-detail">SOC ANALYST PORTFOLIO</span>
+        <span class="brand-detail">SOC ANALYST <span aria-hidden="true">/</span> SOUTH AFRICA</span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
         <span></span><span></span><span></span>
@@ -28,9 +28,10 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#investigations">Investigations</a>
-        <a href="#detections">Detection Rules</a>
-        <a href="#notes">Lab Notes</a>
+        <a href="#lab-work">Lab Work</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -38,146 +39,137 @@
 
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="container hero-layout">
+      <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">ENTRY-LEVEL CYBERSECURITY <span class="eyebrow-divider">/</span> SOUTH AFRICA</p>
-          <h1 id="hero-title">Emmanual Januarie <span class="title-break">Aspiring SOC Analyst</span></h1>
-          <p class="hero-intro">I’m building foundational skills in alert triage, log analysis, and investigation reporting through authorised defensive labs. I’m seeking a junior SOC or security monitoring role and have not yet worked in a professional SOC.</p>
+          <p class="eyebrow"><span class="status-mark" aria-hidden="true"></span> ENTRY-LEVEL SECURITY OPERATIONS</p>
+          <h1 id="hero-title">Emmanual Januarie<span class="title-break">SOC Analyst</span></h1>
+          <p class="hero-intro">IT Systems Development graduate pursuing an entry-level SOC Analyst role. Building practical investigation experience through authorised cybersecurity labs.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#investigations">View My Investigations <span aria-hidden="true">↘</span></a>
-            <a class="button button-secondary" href="#skills">Explore My Skills</a>
-            <a class="button button-quiet" href="https://github.com/EmmanualJanuarie" target="_blank" rel="noopener noreferrer">GitHub Profile <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#lab-work">View Lab Work <span aria-hidden="true">↓</span></a>
+            <a class="button button-outline" href="#contact">Contact</a>
           </div>
-          <p class="hero-caption">SECURITY MONITORING <span>·</span> LOG ANALYSIS <span>·</span> AUTHORISED LABS</p>
+          <p class="hero-note">EASTERN CAPE, SOUTH AFRICA <span>/</span> OPEN TO ENTRY-LEVEL SOC OPPORTUNITIES</p>
         </div>
-        <aside class="hero-aside" aria-label="Portfolio profile details">
-          <div class="aside-topline"><span>PROFILE</span><span>ZA / 01</span></div>
-          <p class="profile-name">Emmanual Januarie</p>
-          <p class="profile-location">Eastern Cape, South Africa</p>
+        <aside class="hero-aside" aria-label="Candidate details">
+          <p class="aside-label">CANDIDATE PROFILE</p>
           <dl class="profile-facts">
-            <div><dt>Career focus</dt><dd>Security Operations</dd></div>
-            <div><dt>Experience</dt><dd>Entry-level candidate</dd></div>
+            <div><dt>Career focus</dt><dd>SOC Analyst</dd></div>
+            <div><dt>Level</dt><dd>Entry-level</dd></div>
             <div><dt>Practice</dt><dd>Authorised labs</dd></div>
+            <div><dt>Location</dt><dd>Eastern Cape, South Africa</dd></div>
           </dl>
-          <a class="aside-link" href="#contact">Contact details <span aria-hidden="true">→</span></a>
         </aside>
       </div>
-      <div class="hero-bottom-rule" aria-hidden="true"></div>
     </section>
 
-    <section class="section section-surface" id="about" aria-labelledby="about-title">
-      <div class="container section-layout">
+    <section class="section section-light" id="about" aria-labelledby="about-title">
+      <div class="container section-grid">
         <div class="section-heading">
           <p class="eyebrow">01 / PROFILE</p>
           <h2 id="about-title">About</h2>
         </div>
-        <div class="about-content">
-          <p class="lead">I’m working toward an entry-level SOC Analyst role, building the habits needed to examine alerts carefully and explain what the evidence does—and does not—show.</p>
-          <p>I hold an IT: Systems Development qualification from CTU Training Solutions and have completed two software development internships. The detailed role listed here is my Junior Software Developer Intern position at Kore Business Solutions from August to November 2025; it was software development experience, not SOC work. I’m now focusing my learning on networking, Windows and Linux logs, phishing analysis, indicators of compromise, Wireshark, and Splunk through authorised defensive practice.</p>
-          <div class="background-grid" aria-label="Relevant background">
-            <article><span class="meta-label">QUALIFICATION</span><strong>IT: Systems Development</strong><span>CTU Training Solutions · Feb 2023–Nov 2024</span></article>
-            <article><span class="meta-label">PRIOR EXPERIENCE</span><strong>Junior Software Developer Intern</strong><span>Kore Business Solutions · Aug–Nov 2025</span></article>
-          </div>
-          <p class="credential-note"><span class="meta-label">EXISTING CREDENTIALS</span> <a href="https://learn.microsoft.com/api/credentials/share/en-us/EmmanualJanuarie-0471/35E1E9417CEDE322?sharingId=3C00639A1DE75581" target="_blank" rel="noopener noreferrer">Microsoft DevOps Engineer Expert · December 2024</a> <span aria-hidden="true">·</span> <a href="https://learn.microsoft.com/api/credentials/share/en-us/EmmanualJanuarie-0471/957F82BB0A63E8DE?sharingId=3C00639A1DE75581" target="_blank" rel="noopener noreferrer">Azure Developer Associate · July 2024</a> <span class="note-muted">(cloud / developer credentials; not SOC certifications)</span></p>
+        <div class="section-content">
+          <p class="lead">I’m pursuing entry-level SOC Analyst work after completing an IT Systems Development qualification and two software development internships.</p>
+          <p>My professional experience is in software development; I have not worked in a SOC. I’m building cybersecurity knowledge and investigation practice through authorised labs.</p>
+          <dl class="profile-details">
+            <div><dt>Qualification</dt><dd>IT: Systems Development</dd></div>
+            <div><dt>Institution</dt><dd>CTU Training Solutions</dd></div>
+            <div><dt>Study period</dt><dd>February 2023 – November 2024</dd></div>
+            <div><dt>Prior experience</dt><dd>Two software development internships</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="section section-deep" id="skills" aria-labelledby="skills-title">
+    <section class="section section-navy" id="skills" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section-heading section-heading-wide">
-          <p class="eyebrow">02 / TECHNICAL CAPABILITIES</p>
-          <h2 id="skills-title">Technical Skills</h2>
-          <p class="section-summary">Foundational areas I am currently studying and practising through authorised exercises.</p>
+        <div class="section-heading heading-light">
+          <p class="eyebrow">02 / TECHNICAL</p>
+          <h2 id="skills-title">Skills</h2>
+          <p class="section-summary">Current learning and practice areas for security operations.</p>
         </div>
         <div class="skills-grid">
-          <article class="skill-card"><span class="skill-index">01</span><h3>Networking</h3><p>TCP/IP · DNS · HTTP/HTTPS · Ports &amp; protocols · Wireshark</p></article>
-          <article class="skill-card"><span class="skill-index">02</span><h3>SIEM</h3><p>Splunk concepts · Log searches · Alert investigation · Basic detection logic</p></article>
-          <article class="skill-card"><span class="skill-index">03</span><h3>Windows Security</h3><p>Event Viewer · Windows event IDs · Sysmon concepts · Processes &amp; services · Persistence concepts</p></article>
-          <article class="skill-card"><span class="skill-index">04</span><h3>Linux Security</h3><p>System logs · Key system paths · Cron concepts · Network investigation fundamentals</p></article>
-          <article class="skill-card"><span class="skill-index">05</span><h3>Threat Investigation</h3><p>Phishing analysis · IOCs · Suspicious domains and IPs · Initial triage</p></article>
-          <article class="skill-card"><span class="skill-index">06</span><h3>Incident Response</h3><p>Evidence collection · Timelines · Severity rationale · Reporting &amp; escalation</p></article>
+          <article class="skill-group"><h3>Networking</h3><p>TCP/IP, DNS, HTTP/HTTPS, ports and protocols, Wireshark fundamentals.</p></article>
+          <article class="skill-group"><h3>SIEM &amp; logs</h3><p>Splunk concepts, log searches, Windows Event Viewer, Windows event IDs, Linux logs.</p></article>
+          <article class="skill-group"><h3>Investigation</h3><p>Alert triage, phishing analysis, indicators of compromise, event timelines, evidence notes.</p></article>
+          <article class="skill-group"><h3>Endpoint security</h3><p>Sysmon concepts, processes and services, Linux system paths, basic network investigation.</p></article>
+          <article class="skill-group"><h3>Reporting</h3><p>Record observations, separate facts from assessment, state limitations, document escalation rationale.</p></article>
+          <article class="skill-group"><h3>Security fundamentals</h3><p>Identity and access concepts, authentication, least privilege, false-positive considerations.</p></article>
         </div>
-        <p class="section-footnote">Tools and techniques are listed as learning areas until supported by completed lab evidence.</p>
+        <p class="section-footnote">These are developing skills practised through study and authorised exercises, not professional SOC experience.</p>
       </div>
     </section>
 
-    <section class="section section-surface" id="investigations" aria-labelledby="investigations-title">
+    <section class="section section-light" id="lab-work" aria-labelledby="labs-title">
       <div class="container">
         <div class="section-heading section-heading-wide">
-          <p class="eyebrow">03 / AUTHORISED LAB WORK</p>
-          <h2 id="investigations-title">Security Investigations</h2>
-          <p class="section-summary">Investigation briefs link to structured report templates. Each remains clearly marked incomplete until it is supported by your own authorised lab evidence.</p>
+          <p class="eyebrow">03 / AUTHORISED EXERCISES</p>
+          <h2 id="labs-title">Lab Work</h2>
+          <p class="section-summary">Investigation templates for defensive lab exercises. Reports remain incomplete until populated with observations from the actual exercise.</p>
         </div>
-        <div class="template-grid" id="investigation-list" aria-live="polite"></div>
+        <div class="lab-list" id="lab-list" aria-live="polite"></div>
       </div>
     </section>
 
-    <section class="section section-tint" id="detections" aria-labelledby="detections-title">
-      <div class="container">
-        <div class="section-heading section-heading-wide">
-          <p class="eyebrow">04 / SIEM PRACTICE</p>
-          <h2 id="detections-title">Detection Rules</h2>
-          <p class="section-summary">Rule documentation templates only. Query placeholders require validation; no detection is represented as tested.</p>
+    <section class="section section-paper" id="certifications" aria-labelledby="certifications-title">
+      <div class="container section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">04 / CREDENTIALS</p>
+          <h2 id="certifications-title">Certifications</h2>
         </div>
-        <div class="template-grid detection-grid" id="detection-list" aria-live="polite"></div>
+        <div class="credential-list">
+          <article class="credential">
+            <div><p class="credential-org">MICROSOFT</p><h3>DevOps Engineer Expert</h3><p class="credential-meta">Issued December 2024 <span>·</span> Cloud / DevOps credential</p></div>
+            <a class="credential-link" href="https://learn.microsoft.com/api/credentials/share/en-us/EmmanualJanuarie-0471/35E1E9417CEDE322?sharingId=3C00639A1DE75581" target="_blank" rel="noopener noreferrer">View credential <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="credential">
+            <div><p class="credential-org">MICROSOFT</p><h3>Azure Developer Associate</h3><p class="credential-meta">Issued July 2024 <span>·</span> Cloud / development credential</p></div>
+            <a class="credential-link" href="https://learn.microsoft.com/api/credentials/share/en-us/EmmanualJanuarie-0471/957F82BB0A63E8DE?sharingId=3C00639A1DE75581" target="_blank" rel="noopener noreferrer">View credential <span aria-hidden="true">↗</span></a>
+          </article>
+          <p class="credential-note">These are existing Microsoft cloud and development credentials, not cybersecurity certifications.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section section-surface" id="notes" aria-labelledby="notes-title">
-      <div class="container">
-        <div class="section-heading section-heading-wide">
-          <p class="eyebrow">05 / LEARNING RECORD</p>
-          <h2 id="notes-title">Lab Notes</h2>
-          <p class="section-summary">A structured place for concise notes from future labs, with references and observations kept separate.</p>
-        </div>
-        <div class="notes-grid" id="notes-list" aria-live="polite"></div>
+    <section class="section section-light section-compact" id="education" aria-labelledby="education-title">
+      <div class="container section-grid">
+        <div class="section-heading"><p class="eyebrow">05 / EDUCATION</p><h2 id="education-title">Education</h2></div>
+        <article class="education-entry">
+          <div><h3>IT: Systems Development</h3><p>CTU Training Solutions</p></div>
+          <p class="education-date">February 2023 – November 2024</p>
+        </article>
       </div>
     </section>
 
-    <section class="section section-deep workflow-section" id="workflow" aria-labelledby="workflow-title">
-      <div class="container">
-        <div class="section-heading section-heading-wide">
-          <p class="eyebrow">06 / METHOD</p>
-          <h2 id="workflow-title">Investigation Workflow</h2>
-          <p class="section-summary">A typical defensive workflow. Actual procedures depend on the organisation, alert, and escalation policy.</p>
+    <section class="section section-bluewash" id="resume" aria-labelledby="resume-title">
+      <div class="container section-grid">
+        <div class="section-heading"><p class="eyebrow">06 / DOCUMENT</p><h2 id="resume-title">Resume</h2></div>
+        <div class="resume-document">
+          <div><p class="document-label">PDF DOCUMENT</p><h3>Emmanual Januarie — Resume</h3><p class="document-note">Current resume document.</p></div>
+          <a class="button button-primary" href="documents/emmanual-januarie-resume.pdf" download="Emmanual-Januarie-Resume.pdf">Download Resume <span aria-hidden="true">↓</span></a>
         </div>
-        <ol class="workflow-list">
-          <li><span>01</span><strong>Alert received</strong></li>
-          <li><span>02</span><strong>Initial triage</strong></li>
-          <li><span>03</span><strong>Evidence collection</strong></li>
-          <li><span>04</span><strong>Investigate &amp; validate</strong></li>
-          <li><span>05</span><strong>Assess severity</strong></li>
-          <li><span>06</span><strong>Document &amp; escalate</strong></li>
-          <li><span>07</span><strong>Close or follow up</strong></li>
-        </ol>
       </div>
     </section>
 
     <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-layout">
-        <div class="section-heading">
-          <p class="eyebrow">07 / CONTACT</p>
-          <h2 id="contact-title">Let’s Connect</h2>
-          <p class="section-summary">Open to Junior SOC Analyst, SOC Analyst Tier 1, and Security Monitoring Analyst opportunities in South Africa.</p>
-        </div>
-        <div class="contact-panel">
-          <a class="contact-row" href="mailto:emmanual.dev@gmail.com"><span>Email</span><strong>emmanual.dev@gmail.com</strong><span aria-hidden="true">↗</span></a>
-          <a class="contact-row" href="https://github.com/EmmanualJanuarie" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>github.com/EmmanualJanuarie</strong><span aria-hidden="true">↗</span></a>
-          <a class="contact-row" href="https://www.linkedin.com/in/emmanualjanuarie/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/emmanualjanuarie</strong><span aria-hidden="true">↗</span></a>
-          <div class="contact-row contact-location"><span>Location</span><strong>Eastern Cape, South Africa</strong><span aria-hidden="true">ZA</span></div>
-          <div class="contact-actions"><a class="button button-primary" href="documents/emmanual-januarie-resume.pdf" download="Emmanual-Januarie-Resume.pdf">Download CV <span aria-hidden="true">↓</span></a><p>The current CV reflects my existing software development background.</p></div>
+      <div class="container contact-grid">
+        <div class="section-heading heading-light"><p class="eyebrow">07 / CONTACT</p><h2 id="contact-title">Contact</h2><p class="section-summary">Eastern Cape, South Africa</p></div>
+        <div class="contact-details">
+          <div><p class="contact-label">EMAIL</p><a href="mailto:emmanual.v2@gmail.com">emmanual.v2@gmail.com</a></div>
+          <div><p class="contact-label">GITHUB</p><a href="https://github.com/EmmanualJanuarie" target="_blank" rel="noopener noreferrer">github.com/EmmanualJanuarie <span aria-hidden="true">↗</span></a></div>
+          <div><p class="contact-label">LINKEDIN</p><a href="https://www.linkedin.com/in/emmanualjanuarie/" target="_blank" rel="noopener noreferrer">linkedin.com/in/emmanualjanuarie <span aria-hidden="true">↗</span></a></div>
+          <p class="contact-availability">OPEN TO ENTRY-LEVEL SOC ANALYST OPPORTUNITIES</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-main">
-      <a class="brand footer-brand" href="#home"><span class="brand-name">Emmanual Januarie</span><span class="brand-detail">SOC ANALYST PORTFOLIO</span></a>
-      <nav class="footer-nav" aria-label="Footer navigation"><a href="#about">About</a><a href="#skills">Skills</a><a href="#investigations">Investigations</a><a href="#detections">Detection Rules</a><a href="#notes">Lab Notes</a><a href="#contact">Contact</a></nav>
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-name">Emmanual Januarie</span><span class="brand-detail">SOC ANALYST</span></a>
+      <p>© <span id="current-year">2026</span> Emmanual Januarie · South Africa</p>
+      <div class="footer-links"><a href="https://www.linkedin.com/in/emmanualjanuarie/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/EmmanualJanuarie" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:emmanual.v2@gmail.com">Email</a></div>
     </div>
-    <div class="container footer-bottom"><p>All lab work is educational simulation unless explicitly identified otherwise.</p><p>© <span id="current-year">2026</span> Emmanual Januarie · South Africa</p></div>
   </footer>
 </body>
 </html>
