@@ -8,7 +8,7 @@ Open `index.html` in a browser. To use a local HTTP server, run `python -m http.
 
 ## Add security practice reports
 
-The Projects section has three report templates. Replace a template only after completing the exercise and reviewing what can safely be shared. Do not present simulated activity as production SOC work. A report should include:
+The Labs section has one report template. Complete an authorised exercise, review what can safely be shared, then replace the template with that report. Do not present simulated activity as production SOC work. A report should include:
 
 1. Scenario, scope, and authorised lab/data source
 2. Investigation steps and relevant observations
@@ -23,17 +23,16 @@ Keep credentials, personal data, and sensitive system details out of public repo
 
 - Edit content and section structure in `index.html`.
 - Edit layout, responsive rules, and accessible focus states in `styles.css`.
-- Edit navigation, project links, and credential links in `script.js`.
-- Add project screenshots or videos under `assets/proof/<project-id>/` and register them in `proof.js`.
-- Keep the software development internship and independent software project clearly labelled as transferable background, not cybersecurity employment.
+- Edit navigation, lab report links, and credential links in `script.js`.
+- Add lab screenshots or videos under `assets/proof/<lab-id>/` and register them in `proof.js`.
 - The current downloadable resume reflects the software development background. Replace it with an accurate security-operations-focused resume before using it for SOC applications.
 
-Project repository/demo URLs and Microsoft credential verification URLs are configured in `script.js`. Only publish links that resolve to the intended public destination. Proof media should use synthetic or otherwise authorised data.
+Lab repository/report URLs and Microsoft credential verification URLs are configured in `script.js`. Only publish links that resolve to the intended public destination. Proof media should use synthetic or otherwise authorised data.
 
 ## Files
 
 - `index.html` — one-page portfolio content
 - `styles.css` — design system and responsive layout
-- `script.js` — navigation, project links, and credential links
-- `proof.html`, `proof.css`, `proof.js` — project proof gallery and accessible media viewer
+- `script.js` — navigation, lab report links, and credential links
+- `proof.html`, `proof.css`, `proof.js` — lab evidence gallery and accessible media viewer
 - `documents/` — downloadable documents
