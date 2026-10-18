@@ -95,6 +95,7 @@ h2 { margin-bottom: 0; font-size: clamp(30px, 3.5vw, 42px); font-weight: 700; le
 .lab-placeholder { margin-top: 34px; padding: 23px 25px; border: 1px solid var(--line); border-left: 3px solid var(--accent); background: #f8fafb; }
 .lab-placeholder h3 { margin: 5px 0 8px; font-size: 17px; }
 .lab-placeholder p:last-child { max-width: 800px; margin-bottom: 0; color: #586878; font-size: 13px; }
+.project-template-note { margin: 25px 0 0; padding: 12px 15px; border-left: 2px solid var(--accent); background: #f4f6f8; color: #586878; font-size: 12px; }
 .project-subheading { margin: 42px 0 0; padding-bottom: 13px; border-bottom: 1px solid var(--line); font-size: 16px; }
 .project { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 17px; padding: 27px 0; border-bottom: 1px solid var(--line); }
 .project-featured { padding-top: 32px; padding-bottom: 32px; }

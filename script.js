@@ -33,6 +33,9 @@ if (year) year.textContent = String(new Date().getFullYear());
 const projectLinks = {
   udes: { repository: "https://github.com/EmmanualJanuarie/umbrella", liveSite: "https://emmanualjanuarie.github.io/umbrella/#/login" },
   "internship-kbs": { repository: "https://github.com/EmmanualJanuarie/KBS_portal", liveSite: "https://emmanualjanuarie.github.io/KBS_portal" },
+  "soc-triage": { repository: "", liveSite: "" },
+  "soc-logs": { repository: "", liveSite: "" },
+  "soc-network": { repository: "", liveSite: "" },
 };
 
 function safeWebUrl(value) {
@@ -80,8 +83,14 @@ document.querySelectorAll("[data-project-actions]").forEach((container) => {
   const links = projectLinks[projectId] || {};
   const repositoryButton = container.querySelector('[data-project-link="repository"]');
   const liveSiteButton = container.querySelector('[data-project-link="liveSite"]');
-  if (repositoryButton && !links.repository) repositoryButton.title = "Add the project repository URL in script.js";
-  if (liveSiteButton && !links.liveSite) liveSiteButton.title = "Add the live project URL in script.js";
+  if (repositoryButton && !links.repository) {
+    repositoryButton.disabled = true;
+    repositoryButton.title = "Add the project repository URL in script.js";
+  }
+  if (liveSiteButton && !links.liveSite) {
+    liveSiteButton.disabled = true;
+    liveSiteButton.title = "Add the live project URL in script.js";
+  }
   activateProjectLink(repositoryButton, safeWebUrl(links.repository));
   activateProjectLink(liveSiteButton, safeWebUrl(links.liveSite));
 });

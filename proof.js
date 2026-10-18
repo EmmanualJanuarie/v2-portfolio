@@ -3,6 +3,24 @@
 // Add screenshots/videos to assets/proof/<project-id>/ and register each file below.
 // Supported media types are "image" and "video". Use accurate alt text and captions.
 const proofProjects = {
+  "soc-triage": {
+    title: "Security investigation report",
+    summary: "Authorised lab evidence will appear here after a report is completed and reviewed.",
+    backId: "project-soc-triage",
+    media: [],
+  },
+  "soc-logs": {
+    title: "Windows/Linux log review report",
+    summary: "Authorised lab evidence will appear here after a report is completed and reviewed.",
+    backId: "project-soc-logs",
+    media: [],
+  },
+  "soc-network": {
+    title: "Network investigation report",
+    summary: "Authorised lab evidence will appear here after a report is completed and reviewed.",
+    backId: "project-soc-network",
+    media: [],
+  },
   udes: {
     title: "UDES — Digital Evidence Management System",
     summary: "Screenshots and recordings for the evidence-management workflow. Demonstration media should use synthetic data only.",

@@ -8,7 +8,7 @@ Open `index.html` in a browser. To use a local HTTP server, run `python -m http.
 
 ## Add security practice reports
 
-The portfolio currently has an honest placeholder for lab write-ups. Add a report only after completing the exercise and reviewing what can safely be shared. Do not present simulated activity as production SOC work. A report should include:
+The Projects section has three report templates. Replace a template only after completing the exercise and reviewing what can safely be shared. Do not present simulated activity as production SOC work. A report should include:
 
 1. Scenario, scope, and authorised lab/data source
 2. Investigation steps and relevant observations
