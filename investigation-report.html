@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10263d">
+  <meta name="description" content="Structured report template for an authorised SOC training investigation.">
+  <title>Investigation report | Emmanual Januarie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="investigation-report.css">
+  <script src="script.js" defer></script>
+  <script src="investigation-report.js" defer></script>
+</head>
+<body class="report-page">
+  <a class="skip-link" href="#report-main">Skip to investigation report</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="Emmanual Januarie, home">
+        <span class="brand-name">Emmanual Januarie</span>
+        <span class="brand-detail">SOC ANALYST PORTFOLIO</span>
+      </a>
+      <a class="report-header-link" href="index.html#investigations">All investigations <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="report-main" class="report-main">
+    <div class="container report-container">
+      <nav class="report-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html#investigations">Investigations</a><span aria-hidden="true">/</span><span id="report-breadcrumb-title">Report</span>
+      </nav>
+
+      <header class="report-header">
+        <p class="eyebrow">SECURITY OPERATIONS / INVESTIGATION RECORD</p>
+        <div class="report-title-row">
+          <div>
+            <p class="report-status">LAB TEMPLATE — NOT YET COMPLETED</p>
+            <h1 id="report-title">Investigation report</h1>
+          </div>
+          <button class="button button-outline report-print" id="print-report" type="button">Print / Save PDF</button>
+        </div>
+        <p class="report-deck" id="report-summary"></p>
+        <dl class="report-metadata">
+          <div><dt>Prepared by</dt><dd>Emmanual Januarie</dd></div>
+          <div><dt>Exercise date</dt><dd>[RECORD ACTUAL DATE]</dd></div>
+          <div><dt>Environment</dt><dd>[NAME AUTHORISED LAB]</dd></div>
+          <div><dt>Dataset</dt><dd>[IDENTIFY SOURCE]</dd></div>
+        </dl>
+        <p class="report-integrity-note"><strong>Record handling:</strong> Complete this report from an authorised training exercise. Keep source, timestamps, context, and limitations with each observation. Do not add simulated results as if they were observed.</p>
+      </header>
+
+      <div class="report-layout">
+        <aside class="report-contents" aria-label="Report contents">
+          <p class="report-contents-title">REPORT CONTENTS</p>
+          <nav id="report-contents-links" aria-label="Report sections"></nav>
+          <a class="report-proof-link" id="report-proof-link" href="proof.html">Proof &amp; media <span aria-hidden="true">↗</span></a>
+        </aside>
+        <div class="report-body" id="report-sections" aria-live="polite"></div>
+      </div>
+
+      <div class="report-bottom-actions">
+        <a class="button button-secondary" href="index.html#investigations">← Back to investigations</a>
+        <a class="button button-secondary" href="index.html#detections">Detection rule templates</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="index.html#home"><span class="brand-name">Emmanual Januarie</span><span class="brand-detail">SOC ANALYST PORTFOLIO</span></a>
+      <p class="report-footer-note">Educational lab template · not a production incident report</p>
+    </div>
+  </footer>
+</body>
+</html>

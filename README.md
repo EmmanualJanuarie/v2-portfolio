@@ -10,7 +10,8 @@ Open `index.html` in a browser. To serve it locally, run `python -m http.server 
 
 - Edit profile, skills, education, experience, and contact details in `index.html`.
 - Edit investigation, detection-rule, and lab-note templates in the data arrays in `script.js`.
-- Investigation, detection, and note cards are generated from shared accessible disclosure components.
+- Investigation summaries on the home page link to full report templates in `investigation-report.html`. Add a verified, sanitised GitHub repository URL to the matching investigation's `repository` value in `script.js` to enable its repository button.
+- Detection-rule and lab-note templates use shared accessible disclosure components.
 - Replace bracketed text only with your own verified exercise information. Leave a template clearly marked incomplete until you have completed and reviewed it.
 - Detection query text is a placeholder, not validated logic. Document test method and actual results only after testing with authorised data.
 
@@ -27,5 +28,6 @@ The site uses information already present in the portfolio: IT: Systems Developm
 - `index.html` — portfolio structure and verified profile details
 - `styles.css` — restrained navy, white, and steel-blue visual style with responsive layout
 - `script.js` — reusable investigation, detection-rule, and lab-note templates
+- `investigation-report.html`, `investigation-report.css`, `investigation-report.js` — structured, printable investigation reports populated from the shared templates
 - `proof.html`, `proof.css`, `proof.js` — lab evidence gallery and accessible media viewer
 - `documents/` — existing resume download

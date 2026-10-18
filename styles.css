@@ -257,6 +257,18 @@ code { padding: 2px 4px; background: #e3eaf0; color: var(--navy); font-size: .9e
 .skill-card p::before { position: absolute; top: .62em; left: 0; width: 4px; height: 4px; background: #8fa9bf; content: ""; }
 .section-deep .section-footnote { color: #c1ced9; }
 .template-grid, .notes-grid { display: block; margin-top: 38px; border-top: 1px solid var(--line); }
+#investigation-list, .investigation-list { display: block; margin-top: 38px; border-top: 1px solid var(--line); }
+.investigation-entry { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 17px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.investigation-index { padding-top: 2px; color: #8090a0; font-family: var(--font-heading); font-size: 12px; font-weight: 700; }
+.investigation-main { min-width: 0; }
+.investigation-label { margin: 0 0 6px; color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .13em; }
+.investigation-title { margin: 0 0 7px; color: var(--navy); font-family: var(--font-heading); font-size: 19px; letter-spacing: -.025em; }
+.investigation-summary { max-width: 790px; margin: 0; color: #596978; font-size: 13px; }
+.investigation-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.investigation-button.button { min-height: 35px; padding: 0 11px; border-color: #b9c8d4; font-size: 9px; letter-spacing: .07em; }
+.investigation-button.button:disabled { border-color: #d8e0e7; background: #f7f8f9; color: #788796; cursor: not-allowed; }
+.investigation-button.button-primary { background: var(--navy); color: white; }
+.investigation-button.button-primary:hover, .investigation-button.button-primary:focus-visible { border-color: var(--accent); background: var(--accent); }
 .disclosure-card { overflow: visible; border: 0; border-bottom: 1px solid var(--line); background: transparent; }
 .disclosure-card[open] { border-color: var(--line); background: transparent; }
 .disclosure-card summary { grid-template-columns: minmax(120px, 220px) minmax(0, 1fr) 24px; gap: 10px 18px; padding: 20px 0; }
@@ -330,4 +342,7 @@ a.contact-row:hover strong, a.contact-row:focus-visible strong { color: #d1deea;
   .contact-row { grid-template-columns: 62px minmax(0, 1fr) 14px; gap: 8px; }
   .footer-main, .footer-bottom { align-items: flex-start; flex-direction: column; }
   .footer-nav { justify-content: flex-start; gap: 13px; }
+  .investigation-entry { grid-template-columns: 30px minmax(0, 1fr); gap: 10px; }
+  .investigation-title { font-size: 17px; }
+  .investigation-actions .investigation-button { flex: 1 1 100%; }
 }

@@ -6,19 +6,16 @@ const proofLabs = {
   "brute-force-login": {
     title: "Brute-Force Login Investigation",
     summary: "Authorised supporting evidence can be registered here after the lab is completed and reviewed.",
-    backId: "report-brute-force-login",
     media: [],
   },
   "phishing-email": {
     title: "Phishing Email Investigation",
     summary: "Authorised supporting evidence can be registered here after the lab is completed and reviewed.",
-    backId: "report-phishing-email",
     media: [],
   },
   "endpoint-network": {
     title: "Windows Endpoint or Network Investigation",
     summary: "Authorised supporting evidence can be registered here after the lab is completed and reviewed.",
-    backId: "report-endpoint-network",
     media: [],
   },
 };
@@ -138,7 +135,7 @@ if (!lab) {
   title.textContent = lab.title;
   summary.textContent = lab.summary;
   breadcrumb.textContent = lab.title;
-  backLink.href = `index.html#${lab.backId}`;
+  backLink.href = `investigation-report.html?lab=${encodeURIComponent(labId)}`;
   const validMedia = lab.media.filter(addMediaItem);
   count.textContent = `${validMedia.length} ${validMedia.length === 1 ? "item" : "items"}`;
   if (validMedia.length === 0) {

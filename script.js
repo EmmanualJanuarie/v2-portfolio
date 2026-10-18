@@ -34,39 +34,41 @@ const investigationTemplates = [
     id: "brute-force-login",
     title: "Brute-Force Login Investigation",
     summary: "Template for examining suspicious authentication activity and building an evidence-based event timeline.",
+    repository: "",
     fields: [
       ["Investigation objective", "[STATE WHAT YOU WANT TO DETERMINE]"],
-      ["Scenario and alert details", "[DESCRIBE THE LAB SCENARIO AND ALERT; DO NOT ADD FICTIONAL RESULTS]"],
-      ["Lab environment and tools", "[NAME THE AUTHORISED LAB ENVIRONMENT AND TOOLS YOU ACTUALLY USED]"],
-      ["Dataset source", "[IDENTIFY THE PROVIDED OR GENERATED LAB DATASET]"],
-      ["Investigation methodology", "[DOCUMENT YOUR ACTUAL INVESTIGATION STEPS IN ORDER]", true],
-      ["Evidence and observations", "[RECORD OBSERVED FAILED AND SUCCESSFUL LOGIN EVENTS; INCLUDE SOURCE AND CONTEXT]", true],
-      ["Commands, queries or filters", "[ADD SPLUNK QUERY OR FILTER YOU ACTUALLY USED]", true],
-      ["Timeline of events", "[RECORD ACTUAL TIMESTAMPS AND EVENTS IN TIME ORDER]", true],
-      ["Analysis and reasoning", "[EXPLAIN HOW THE EVIDENCE SUPPORTS OR DOES NOT SUPPORT EACH POSSIBILITY]", true],
-      ["Findings and conclusion", "[ADD YOUR FINDINGS HERE; SEPARATE FACTS FROM POSSIBLE EXPLANATIONS]", true],
-      ["Severity and justification", "[ASSESS SEVERITY USING THE LAB CONTEXT AND EXPLAIN YOUR REASONING]"],
-      ["Containment or remediation", "[DOCUMENT RECOMMENDED ACTIONS; DO NOT CLAIM ACTIONS YOU DID NOT TAKE]", true],
-      ["Escalation decision", "[RECORD WHETHER YOU WOULD ESCALATE AND WHY]"],
+      ["Scenario and alert details", "[IDENTIFY THE AUTHORISED LAB SCENARIO, ALERT OR RULE NAME, PROVIDED TIME WINDOW, LAB ACCOUNT/HOST CONTEXT, AND SCOPE. DO NOT ADD FICTIONAL RESULTS]", true],
+      ["Lab environment and tools", "[RECORD LAB PROVIDER/ENVIRONMENT, RELEVANT SYSTEM OR PRODUCT VERSIONS, TOOLS AND VERSIONS, AND TIME ZONE]", true],
+      ["Dataset source", "[IDENTIFY THE LOG SOURCE OR FILE, LAB REFERENCE, COLLECTION/EXPORT CONTEXT, INTEGRITY HASH IF AVAILABLE, AND KNOWN DATA LIMITATIONS]", true],
+      ["Investigation methodology", "[NUMBER YOUR ACTUAL STEPS. INCLUDE INITIAL SCOPE CHECK, QUERIES/FILTERS, FIELDS REVIEWED, CORRELATION/PIVOTS, VALIDATION, AND HOW THE ORIGINAL DATA WAS PRESERVED]", true],
+      ["Evidence and observations", "[FOR EACH ITEM, RECORD EVIDENCE ID, SOURCE, EVENT/RECORD ID, EXACT OBSERVED FIELDS, TIMESTAMP AND TIME ZONE, CONTEXT, RELEVANCE, AND LIMITATIONS. DISTINGUISH OBSERVATION FROM INTERPRETATION]", true],
+      ["Commands, queries or filters", "[PASTE THE EXACT COMMAND/QUERY AND TIME RANGE YOU USED. EXPLAIN IMPORTANT FILTERS AND FIELDS; REMOVE SECRETS OR PERSONAL DATA]", true],
+      ["Timeline of events", "[LIST VERIFIED EVENTS IN ORDER: TIMESTAMP WITH TIME ZONE, EVENT DESCRIPTION, SOURCE/EVIDENCE ID, AND ANY TIMESTAMP NORMALISATION. MARK GAPS CLEARLY]", true],
+      ["Analysis and reasoning", "[STATE VERIFIED FACTS FIRST. THEN DISCUSS INTERPRETATION, SUPPORTING/CONTRADICTING EVIDENCE, PLAUSIBLE BENIGN EXPLANATIONS, AND WHAT CANNOT BE DETERMINED]", true],
+      ["Findings and conclusion", "[SUMMARISE ONLY CONCLUSIONS SUPPORTED BY THE AVAILABLE LAB EVIDENCE. SEPARATE CONFIRMED FACTS, ASSESSMENT, AND UNRESOLVED QUESTIONS]", true],
+      ["Severity and justification", "[NAME THE LAB/ORGANISATION SEVERITY FRAMEWORK IF PROVIDED; EXPLAIN SCOPE, POTENTIAL IMPACT, URGENCY, AND UNCERTAINTY. DO NOT INVENT A RATING]", true],
+      ["Containment or remediation", "[SEPARATE RECOMMENDED ACTIONS FROM ACTIONS ACTUALLY TAKEN. NOTE ANY APPROVAL/OWNER REQUIREMENTS; DO NOT CLAIM ACTIONS YOU DID NOT TAKE]", true],
+      ["Escalation decision", "[RECORD ESCALATE / DO NOT ESCALATE / UNDETERMINED, THE POLICY OR CRITERIA USED, REASONING, AND WHAT EVIDENCE OR OWNER IS NEEDED NEXT]", true],
       ["Lessons learned", "[NOTE WHAT YOU LEARNED AND WHAT YOU WOULD IMPROVE]", true],
-      ["Screenshots and supporting evidence", "[INSERT SCREENSHOT — USE AUTHORISED, SANITISED LAB EVIDENCE ONLY]", true],
+      ["Screenshots and supporting evidence", "[LIST SUPPORTING FILES BY EVIDENCE ID AND FILENAME. EXPLAIN WHAT EACH SHOWS; SANITISE PERSONAL DATA, CREDENTIALS, TOKENS, AND PRIVATE DETAILS BEFORE PUBLISHING]", true],
     ],
   },
   {
     id: "phishing-email",
     title: "Phishing Email Investigation",
     summary: "Template for reviewing an authorised sample email, its authentication results, URLs, and indicators.",
+    repository: "",
     fields: [
       ["Investigation objective", "[STATE WHAT YOU WANT TO DETERMINE ABOUT THE SAMPLE]"],
-      ["Scenario and alert details", "[DESCRIBE THE AUTHORISED EXERCISE AND PROVIDED ALERT]"],
-      ["Lab environment and tools", "[NAME THE ENVIRONMENT AND TOOLS ACTUALLY USED]"],
-      ["Dataset source", "[IDENTIFY THE TRAINING SAMPLE OR LAB DATA SOURCE]"],
-      ["Investigation methodology", "[DOCUMENT HOW YOU REVIEWED THE MESSAGE AND ITS CONTEXT]", true],
-      ["Evidence and observations", "[RECORD HEADER FIELDS, AUTHENTICATION RESULTS, URLS, AND INDICATORS THAT YOU OBSERVED]", true],
-      ["Commands, queries or filters", "[ADD THE ACTUAL SEARCH, COMMAND, OR FILTER USED]", true],
-      ["Timeline of events", "[RECORD ACTUAL MESSAGE AND EVENT TIMESTAMPS, IF PROVIDED]", true],
-      ["Analysis and reasoning", "[EXPLAIN WHICH OBSERVATIONS SUPPORT OR WEAKEN EACH INTERPRETATION]", true],
-      ["Findings and conclusion", "[CLASSIFY AS MALICIOUS, SUSPICIOUS, OR BENIGN ONLY IF THE EVIDENCE SUPPORTS IT]", true],
+      ["Scenario and alert details", "[DESCRIBE THE AUTHORISED EXERCISE, ALERT CONTEXT, SAMPLE SOURCE, AND REVIEW SCOPE. DO NOT CLAIM THE MESSAGE REACHED A REAL USER]", true],
+      ["Lab environment and tools", "[RECORD SANDBOX/MAIL ANALYSIS ENVIRONMENT, TOOLS AND VERSIONS, AND WHETHER NETWORK LOOKUPS WERE AUTHORISED]", true],
+      ["Dataset source", "[IDENTIFY THE PROVIDED EMAIL SAMPLE OR TRAINING SOURCE, FILE/RECORD REFERENCE, HASH IF AVAILABLE, AND ANY MISSING HEADERS OR CONTEXT]", true],
+      ["Investigation methodology", "[NUMBER YOUR REVIEW STEPS: PRESERVE SAMPLE, REVIEW SENDER/HEADER, CHECK AUTHENTICATION, INSPECT LINKS SAFELY, VALIDATE INDICATORS WITH APPROVED SOURCES, AND RECORD LIMITATIONS]", true],
+      ["Evidence and observations", "[RECORD EVIDENCE ID AND EXACT HEADER/AUTHENTICATION FIELDS, URL/DOMAIN VALUES, REDIRECTS OR FILE DETAILS OBSERVED, SOURCE, AND CONTEXT. DO NOT OPEN SUSPICIOUS CONTENT OUTSIDE AN AUTHORISED SAFE ENVIRONMENT]", true],
+      ["Commands, queries or filters", "[ADD THE EXACT SEARCH, COMMAND, OR FILTER AND ANY APPROVED LOOKUP SOURCE USED. REMOVE LIVE TOKENS OR PERSONAL DATA]", true],
+      ["Timeline of events", "[RECORD ACTUAL MESSAGE, SUBMISSION, AND RELATED EVENT TIMES WITH TIME ZONE; STATE WHEN TIMESTAMPS WERE NOT PROVIDED]", true],
+      ["Analysis and reasoning", "[SEPARATE OBSERVED MESSAGE FACTS FROM ASSESSMENT. EXPLAIN SUPPORTING/CONTRADICTING SIGNS, POSSIBLE LEGITIMATE EXPLANATIONS, AND UNVERIFIED INDICATORS]", true],
+      ["Findings and conclusion", "[CLASSIFY AS MALICIOUS, SUSPICIOUS, BENIGN, OR INCONCLUSIVE ONLY WHEN THE AVAILABLE EVIDENCE SUPPORTS IT; STATE WHAT REMAINS UNKNOWN]", true],
       ["Severity and justification", "[ASSESS POTENTIAL IMPACT IN THE EXERCISE CONTEXT]"],
       ["Containment or remediation", "[DOCUMENT RECOMMENDED USER, MESSAGE, OR INDICATOR ACTIONS]", true],
       ["Escalation decision", "[RECORD WHETHER FURTHER REVIEW IS NEEDED AND WHY]"],
@@ -78,17 +80,18 @@ const investigationTemplates = [
     id: "endpoint-network",
     title: "Windows Endpoint or Network Investigation",
     summary: "Template for reviewing authorised Windows, Sysmon, or packet-capture data and explaining the findings.",
+    repository: "",
     fields: [
       ["Investigation objective", "[STATE THE ACTIVITY OR QUESTION TO INVESTIGATE]"],
-      ["Scenario and alert details", "[DESCRIBE THE LAB SCENARIO AND ALERT DETAILS PROVIDED]"],
-      ["Lab environment and tools", "[NAME THE AUTHORISED ENDPOINT OR NETWORK LAB AND TOOLS USED]"],
-      ["Dataset source", "[IDENTIFY THE EVENT LOG, SYSMON DATA, OR PCAP SOURCE]"],
-      ["Investigation methodology", "[LIST THE REVIEW STEPS YOU ACTUALLY PERFORMED]", true],
-      ["Evidence and observations", "[RECORD RELEVANT EVENT IDs, PROCESS DETAILS, OR NETWORK OBSERVATIONS]", true],
-      ["Commands, queries or filters", "[ADD YOUR ACTUAL FILTERS, COMMANDS, OR QUERY]", true],
-      ["Timeline of events", "[RECORD ACTUAL TIMESTAMPS AND CORRELATED EVENTS]", true],
-      ["Analysis and reasoning", "[EXPLAIN THE REASONING; LABEL UNCONFIRMED CAUSES AS POSSIBILITIES]", true],
-      ["Findings and conclusion", "[ADD YOUR FINDINGS HERE; STATE LIMITATIONS AND UNCERTAINTY]", true],
+      ["Scenario and alert details", "[DESCRIBE THE AUTHORISED ENDPOINT/NETWORK EXERCISE, ALERT CONTEXT, TARGET SYSTEMS IN SCOPE, AND PROVIDED TIME WINDOW]", true],
+      ["Lab environment and tools", "[RECORD WINDOWS/LINUX LAB DETAILS, HOST OR SENSOR ROLE, TOOL VERSIONS, TIME ZONE, AND CAPTURE SETTINGS IF RELEVANT]", true],
+      ["Dataset source", "[IDENTIFY EVENT LOG/SYSMON/PCAP FILE OR INDEX, SOURCE REFERENCE, COLLECTION PERIOD, HASH IF AVAILABLE, AND COVERAGE LIMITATIONS]", true],
+      ["Investigation methodology", "[NUMBER YOUR ACTUAL REVIEW STEPS. INCLUDE EVENT/FIELD SELECTION, PROCESS OR NETWORK PIVOTS, TIME CORRELATION, VALIDATION, AND DATA PRESERVATION]", true],
+      ["Evidence and observations", "[FOR EACH ITEM, RECORD EVIDENCE ID, SOURCE, EVENT ID OR PACKET/FLOW REFERENCE, TIMESTAMP AND TIME ZONE, EXACT FIELDS/VALUES, CONTEXT, AND LIMITATIONS]", true],
+      ["Commands, queries or filters", "[ADD EXACT EVENT VIEWER FILTERS, SPLUNK SEARCHES, SHELL COMMANDS, OR WIRESHARK DISPLAY FILTERS AND THE TIME RANGE USED]", true],
+      ["Timeline of events", "[RECORD VERIFIED TIMESTAMPS AND CORRELATED EVENTS IN ORDER; INCLUDE SOURCE/EVIDENCE IDS AND NOTE CLOCK OR TIME-ZONE DIFFERENCES]", true],
+      ["Analysis and reasoning", "[EXPLAIN WHAT IS DIRECTLY OBSERVED, WHAT IS INFERRED, WHICH ALTERNATIVES WERE CONSIDERED, AND WHAT ADDITIONAL DATA WOULD CONFIRM OR REFUTE THEM]", true],
+      ["Findings and conclusion", "[STATE EVIDENCE-BASED FINDINGS AND LIMITATIONS. DO NOT LABEL NORMAL OR SUSPICIOUS ACTIVITY WITHOUT SUPPORTING OBSERVATIONS]", true],
       ["Severity and justification", "[ASSESS SEVERITY FOR THE LAB CONTEXT AND EXPLAIN WHY]"],
       ["Containment or remediation", "[RECOMMEND NEXT STEPS; DO NOT CLAIM A RESPONSE WAS EXECUTED]", true],
       ["Escalation decision", "[RECORD WHETHER YOU WOULD ESCALATE AND WHAT EVIDENCE SUPPORTS THAT]"],
@@ -97,6 +100,7 @@ const investigationTemplates = [
     ],
   },
 ];
+window.SOC_INVESTIGATION_TEMPLATES = investigationTemplates;
 
 const detectionTemplates = [
   {
@@ -186,9 +190,8 @@ function makeField(field) {
   return wrapper;
 }
 
-function makeDisclosure({ title, summary, label, fields, labId, status }) {
+function makeDisclosure({ title, summary, label, fields }) {
   const details = makeElement("details", "disclosure-card");
-  if (labId) details.id = `report-${labId}`;
 
   const summaryElement = makeElement("summary");
   summaryElement.append(
@@ -199,40 +202,57 @@ function makeDisclosure({ title, summary, label, fields, labId, status }) {
   details.append(summaryElement);
 
   const body = makeElement("div", "disclosure-body");
-  if (status) body.append(makeElement("span", "template-status", status));
   const fieldGrid = makeElement("div", "report-fields");
   fields.forEach((field) => fieldGrid.append(makeField(field)));
   body.append(fieldGrid);
-
-  if (labId) {
-    const actions = makeElement("div", "detail-actions");
-    const repository = makeElement("button", "text-action text-action-disabled", "Repository · add link");
-    repository.type = "button";
-    repository.disabled = true;
-    repository.title = "Add a real repository URL when this lab report is ready";
-    const report = makeElement("button", "text-action text-action-disabled", "Live report · add link");
-    report.type = "button";
-    report.disabled = true;
-    report.title = "The report template is displayed above; add a published report URL when available";
-    const media = makeElement("a", "text-action", "Proof & media ↗");
-    media.href = `proof.html?lab=${encodeURIComponent(labId)}`;
-    media.target = "_blank";
-    media.rel = "noopener noreferrer";
-    actions.append(repository, report, media);
-    body.append(actions);
-  }
   details.append(body);
   return details;
 }
 
+function makeInvestigationEntry(item, index) {
+  const entry = makeElement("article", "investigation-entry");
+  const number = makeElement("span", "investigation-index", String(index + 1).padStart(2, "0"));
+  const content = makeElement("div", "investigation-main");
+  content.append(
+    makeElement("p", "investigation-label", "AUTHORISED LAB TEMPLATE"),
+    makeElement("h3", "investigation-title", item.title),
+    makeElement("p", "investigation-summary", item.summary),
+  );
+  const actions = makeElement("div", "investigation-actions");
+  const repoUrl = typeof item.repository === "string" ? item.repository.trim() : "";
+  if (repoUrl && isSafeExternalUrl(repoUrl)) {
+    const repo = makeElement("a", "button button-secondary investigation-button", "GitHub Repository ↗");
+    repo.href = repoUrl;
+    repo.target = "_blank";
+    repo.rel = "noopener noreferrer";
+    actions.append(repo);
+  } else {
+    const repo = makeElement("button", "button button-secondary investigation-button", "GitHub Repository · not added");
+    repo.type = "button";
+    repo.disabled = true;
+    repo.title = "Add a real, sanitised repository URL to this investigation before publishing it";
+    actions.append(repo);
+  }
+  const report = makeElement("a", "button button-primary investigation-button", "View Full Report →");
+  report.href = `investigation-report.html?lab=${encodeURIComponent(item.id)}`;
+  actions.append(report);
+  content.append(actions);
+  entry.append(number, content);
+  return entry;
+}
+
+function isSafeExternalUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && url.hostname.length > 0;
+  } catch {
+    return false;
+  }
+}
+
 const investigationList = document.querySelector("#investigation-list");
 if (investigationList) {
-  investigationTemplates.forEach((item) => investigationList.append(makeDisclosure({
-    ...item,
-    labId: item.id,
-    label: "LAB TEMPLATE — NOT YET COMPLETED",
-    status: "LAB TEMPLATE — NOT YET COMPLETED",
-  })));
+  investigationTemplates.forEach((item, index) => investigationList.append(makeInvestigationEntry(item, index)));
 }
 
 const detectionList = document.querySelector("#detection-list");
